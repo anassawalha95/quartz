@@ -2,7 +2,8 @@
 title: 🪴 Quartz 3.
 enableToc: false
 ---
-		Woho we have made happen
+
+Woho we have made happen
 Host your second brain and [digital garden](https://jzhao.xyz/posts/networked-thought) for free. Quartz features
 
 1. Extremely fast natural-language [[notes/search]]
