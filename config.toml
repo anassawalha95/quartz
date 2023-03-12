@@ -1,6 +1,8 @@
-baseURL = "https://anassawalha95.github.io/quartz/"
+baseURL = "https://anassawalha95.github.io/garden/"
 languageCode = "en-us"
-relativeURLs = false
+enableEmoji = true
+relativeURLs = true
+canonifyURLs = true
 disablePathToLower = true
 ignoreFiles = [
     "/content/templates/*",
@@ -9,12 +11,11 @@ ignoreFiles = [
 summaryLength = 20
 paginate = 10
 enableGitInfo = true
-
 [markup]
     [markup.tableOfContents]
-        endLevel = 3
+        endLevel = 6
         ordered = true
-        startLevel = 2
+        startLevel = 1
     [markup.highlight]
         noClasses = false
         anchorLineNos = false
@@ -26,6 +27,23 @@ enableGitInfo = true
         lineNos = true
         lineNumbersInTable = true
         style = "dracula"
+    [markup.goldmark]
+        [markup.goldmark.extensions]
+            definitionList = true
+            footnote = true
+            linkify = true
+            linkifyProtocol = 'https'
+            strikethrough = true
+            table = true
+            taskList = true
+            typographer = true
+        [markup.goldmark.parser]
+            autoHeadingID = true
+            autoHeadingIDType = 'github'
+            wrapStandAloneImageWithinParagraph = true
+            [markup.goldmark.parser.attribute]
+                block = false
+                title = true
     [frontmatter]
         lastmod = ["lastmod", ":git", "date", "publishDate"]
         publishDate = ["publishDate", "date"]

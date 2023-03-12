@@ -1,5 +1,6 @@
-cd "c:\Users\User\Desktop\Obsidian\hugo-obsidian"; rm -fr "c:\Users\User\Desktop\Obsidian\quartz\content\*"; rm -rf "c:\Users\User\Desktop\Obsidian\public\*"; c:\Users\User\Desktop\Obsidian\obsidian-export\target\debug\obsidian-export  --add-titles --frontmatter=always  c:\Users\User\Desktop\Obsidian\bkb c:\Users\User\Desktop\Obsidian\quartz\content; go run "c:\Users\User\Desktop\Obsidian\hugo-obsidian" -input="c:\Users\User\Desktop\Obsidian\quartz\content" -output="c:\Users\User\Desktop\Obsidian\quartz\assets\indices" -index -root="c:\Users\User\Desktop\Obsidian\quartz"; (cd "c:\Users\User\Desktop\Obsidian\quartz" && hugo --minify)
+#!/bin/bash
 
-
-
-sleep 100
+cd ~/Sites/hugo-obsidian; rm -fr ~/Sites/quartz/content/*; 
+rm -rf ~/Sites/quartz/public/*; 
+~/Sites/obsidian-export/target/debug/obsidian-export --add-titles --frontmatter=always /Users/brandonkboswell/My\ Drive/2.\ Areas/Obsidian/bkb ~/Sites/quartz/content;
+ go run ~/Sites/hugo-obsidian -input=/Users/brandonkboswell/Sites/quartz/content -output=/Users/brandonkboswell/Sites/quartz/assets/indices -index -root=/Users/brandonkboswell/Sites/quartz; (cd ~/Sites/quartz && hugo --minify)

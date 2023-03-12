@@ -1,16 +1,5 @@
-
-
-<hr/>
-
-{{if $.Site.Data.config.enableFooter}}
-<div class="page-end" id="footer">
-    <div class="backlinks-container">
-        {{partial "backlinks.html" .}}
-    </div>
-    <div>
-        {{partial "graph.html" .}}
-    </div>
-</div>
+{{ if ((not (.Params.disableOutreach))) }}
+  {{partial "outreach.html" .}}
 {{end}}
-
+{{partial "subscribe.html" .}}
 {{partial "contact.html" .}}

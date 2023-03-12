@@ -1,25 +1,16 @@
-import {
-  apply,
-  navigate,
-  prefetch,
-  router,
-} from "https://unpkg.com/million@1.11.5/dist/router.mjs"
+import { router, navigate, reload, prefetch } from "https://unpkg.com/million@1.9.6/dist/router.mjs"
 
-export const attachSPARouting = (init, rerender) => {
+export const attachSPARouting = (draw) => {
   // Attach SPA functions to the global Million namespace
   window.Million = {
-    apply,
-    navigate,
-    prefetch,
     router,
-  }
-
-  const render = () => requestAnimationFrame(rerender)
-  window.addEventListener("DOMContentLoaded", () => {
-    apply((doc) => init(doc))
-    init()
-    router(".singlePage")
-    render()
-  })
-  window.addEventListener("million:navigate", render)
+    navigate,
+    reload,
+    prefetch,
+  };
+  router(".bodyContent")
+  // We need on initial load, then subsequent redirs
+  // requestAnimationFrame() delays graph draw until SPA routing is finished
+  reload(draw)
+  window.addEventListener("DOMContentLoaded", () => requestAnimationFrame(draw))
 }

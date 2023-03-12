@@ -1,8 +1,10 @@
 .DS_Store
-#public
+public
+public/*
+node_modules
 resources
 .idea
-content/.obsidian
 assets/indices/linkIndex.json
 assets/indices/contentIndex.json
-linkmap
+content/.obsidian
+content/*

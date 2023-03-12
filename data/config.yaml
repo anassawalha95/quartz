@@ -1,18 +1,20 @@
-name: Jacky Zhao
-enableToc: true
+name: GNOSIS
+enableToc: false
 openToc: false
 enableLinkPreview: true
 enableLatex: true
 enableCodeBlockTitle: true
-enableCodeBlockCopy: true
-enableCallouts: true
+enableCodeBlockCopy: false
+enableCallouts: false
 enableSPA: true
 enableFooter: true
 enableContextualBacklinks: true
 enableRecentNotes: false
-enableGitHubEdit: true
-enableMermaid: true
-GitHubLink: https://github.com/anassawalha95/quartz/tree/hugo/content
+enableGitHubEdit: false
+enableMermaid: false
+enableBackLinks: true
+GitHubLink: https://github.com/anassawalha95/garden
+baseURL: "https://www.xaprb.com/"
 search:
   enableSemanticSearch: false
   operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
@@ -20,10 +22,13 @@ search:
 description:
   Host your second brain and digital garden for free. Quartz features extremely fast full-text search,
   Wikilink support, backlinks, local graph, tags, and link previews.
-page_title:
-  "🪴 Quartz 3.3"
+page_title: "GNOSIS"
 links:
-  - link_name: Twitter
+  - link_name: Insights
     link: https://twitter.com/_jzhao
-  - link_name: GitHub
+  - link_name: Services
+    link: https://github.com/jackyzha0
+  - link_name: About
+    link: https://github.com/jackyzha0
+  - link_name: Contact
     link: https://github.com/jackyzha0
