@@ -32,18 +32,16 @@ jobs:
         continue-on-error: true
 
       - name: push to the garden
+        uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: ./public
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: commit and push changes
         run: |
+          git config --global user.email "anas.swalha@yahoo.co,"
+          git config --global user.name "Anas Sawalha"
           git add .
-          git commit -m"new publish"
+          git commit -m "New publish"
           git push
-      # - name: Deploy
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: ./public
-      #     publish_branch: master # deploying branch
-      #     cname: brandonkboswell.github.io
