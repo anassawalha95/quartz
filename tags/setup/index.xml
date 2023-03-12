@@ -1,2 +1,641 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>setup on</title><link>https://anassawalha95.github.io/quartz/tags/setup/</link><description>Recent content in setup on</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://anassawalha95.github.io/quartz/tags/setup/index.xml" rel="self" type="application/rss+xml"/><item><title>Setup</title><link>https://anassawalha95.github.io/quartz/notes/setup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anassawalha95.github.io/quartz/notes/setup/</guid><description>Making your own Quartz Setting up Quartz requires a basic understanding of git. If you are unfamiliar, this resource is a great place to start!</description></item><item><title>Editing Content in Quartz</title><link>https://anassawalha95.github.io/quartz/notes/editing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anassawalha95.github.io/quartz/notes/editing/</guid><description>Editing Quartz runs on top of Hugo so all notes are written in Markdown.
-Folder Structure Here&amp;rsquo;s a rough overview of what&amp;rsquo;s what.</description></item><item><title>Obsidian Vault Integration</title><link>https://anassawalha95.github.io/quartz/notes/obsidian/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anassawalha95.github.io/quartz/notes/obsidian/</guid><description>Setup Obsidian is the preferred way to use Quartz. You can either create a new Obsidian Vault or link one that your already have.</description></item><item><title>Preview Changes</title><link>https://anassawalha95.github.io/quartz/notes/preview-changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anassawalha95.github.io/quartz/notes/preview-changes/</guid><description>If you&amp;rsquo;d like to preview what your Quartz site looks like before deploying it to the internet, the following instructions guide you through installing the proper dependencies to run it locally.</description></item><item><title>Deploying Quartz to the Web</title><link>https://anassawalha95.github.io/quartz/notes/hosting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anassawalha95.github.io/quartz/notes/hosting/</guid><description>Hosting on GitHub Pages Quartz is designed to be effortless to deploy. If you forked and cloned Quartz directly from the repository, everything should already be good to go!</description></item><item><title>Configuration</title><link>https://anassawalha95.github.io/quartz/notes/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anassawalha95.github.io/quartz/notes/config/</guid><description>Configuration Quartz is designed to be extremely configurable. You can find the bulk of the configuration scattered throughout the repository depending on how in-depth you&amp;rsquo;d like to get.</description></item><item><title>Hosting with Docker</title><link>https://anassawalha95.github.io/quartz/notes/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anassawalha95.github.io/quartz/notes/docker/</guid><description>If you want to host Quartz on a machine without using a webpage hosting service, it may be easier to install Docker Compose and follow the instructions below than to install Quartz&amp;rsquo;s dependencies manually.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Brandon Boswell</title><link>https://anassawalha95.github.io/garden/tags/setup/</link><description>Recent content from Brandon Boswell's Digital Garden</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://anassawalha95.github.io/garden/tags/setup/index.xml" rel="self" type="application/rss+xml"/><item><title>setup</title><link>https://anassawalha95.github.io/garden/notes/setup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anassawalha95.github.io/garden/notes/setup/</guid><description>Making your own Quartz Setting up Quartz requires a basic understanding of git. If you are unfamiliar, this resource is a great place to start!</description><content:encoded><![CDATA[<h2 id="making-your-own-quartz">Making your own Quartz</h2>
+<p>Setting up Quartz requires a basic understanding of <code>git</code>. If you are unfamiliar, <a href="https://resources.nwplus.io/2-beginner/how-to-git-github.html">this resource</a> is a great place to start!</p>
+<h3 id="forking">Forking</h3>
+<blockquote>
+<p>A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.</p>
+</blockquote>
+<p>Navigate to the GitHub repository for the Quartz project:</p>
+<p>📁 <a href="https://github.com/jackyzha0/quartz">Quartz Repository</a></p>
+<p>Then, Fork the repository into your own GitHub account. <strong>Make sure that when you fork, you <em>uncheck</em> the &lsquo;Copy the <code>hugo</code> branch only&rsquo; option</strong>.</p>
+<p>If you don&rsquo;t have an account, you can make on for free <a href="https://github.com/join">here</a>. More details about forking a repo can be found on <a href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">GitHub&rsquo;s documentation</a>.</p>
+<p><img src="/notes/images%5cfork.png" alt="notes/images/fork.png"/></p>
+<h3 id="cloning">Cloning</h3>
+<p>After you&rsquo;ve made a fork of the repository, you need to download the files locally onto your machine. Ensure you have <code>git</code>, then type the following command in your terminal replacing <code>YOUR-USERNAME</code> with your GitHub username.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git clone https://github.com/YOUR-USERNAME/quartz
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="editing">Editing</h2>
+<p>Great! Now you have everything you need to start editing and growing your digital garden. If you&rsquo;re ready to start writing content already, check out the recommended flow for editing notes in Quartz.</p>
+<blockquote>
+<p>✏️ Step 2: <a href="/notes/editing/">Editing Notes in Quartz</a></p>
+</blockquote>
+<p>Having problems? Checkout our <a href="/notes/troubleshooting/">FAQ and Troubleshooting guide</a>.</p>
+]]></content:encoded></item><item><title>editing</title><link>https://anassawalha95.github.io/garden/notes/editing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anassawalha95.github.io/garden/notes/editing/</guid><description>Editing Quartz runs on top of Hugo so all notes are written in Markdown.
+Folder Structure Here&amp;rsquo;s a rough overview of what&amp;rsquo;s what.</description><content:encoded><![CDATA[<h2 id="editing">Editing</h2>
+<p>Quartz runs on top of <a href="https://gohugo.io/">Hugo</a> so all notes are written in <a href="https://www.markdownguide.org/getting-started/">Markdown</a>.</p>
+<h3 id="folder-structure">Folder Structure</h3>
+<p>Here&rsquo;s a rough overview of what&rsquo;s what.</p>
+<p><strong>All content in your garden can found in the <code>/content</code> folder.</strong> To make edits, you can open any of the files and make changes directly and save it. You can organize content into any folder you&rsquo;d like.</p>
+<p><strong>To edit the main home page, open <code>/content/_index.md</code>.</strong></p>
+<h3 id="front-matter">Front Matter</h3>
+<p>Hugo is picky when it comes to metadata for files. Make sure that your title is double-quoted and that you have a title defined at the top of your file like so, otherwise the generated page will not have a title!</p>
+<p>You can also add tags here as well.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Example Title&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">tags</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">example-tag</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">Rest of your content here...</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="obsidian">Obsidian</h3>
+<p>I recommend using <a href="http://obsidian.md/">Obsidian</a> as a way to edit and grow your digital garden. It comes with a really nice editor and graphical interface to preview all of your local files.</p>
+<p>This step is <strong>highly recommended</strong>.</p>
+<blockquote>
+<p>🔗 Step 3: <a href="/notes/obsidian/">How to setup your Obsidian Vault to work with Quartz</a></p>
+</blockquote>
+<h2 id="previewing-changes">Previewing Changes</h2>
+<p>This step is purely optional and mostly for those who want to see the published version of their digital garden locally before opening it up to the internet. This is <em>highly recommended</em> but not required.</p>
+<blockquote>
+<p>👀 Step 4: <a href="/notes/preview-changes/">Preview Quartz Changes</a></p>
+</blockquote>
+<p>For those who like to live life more on the edge, viewing the garden through Obsidian gets you pretty close to the real thing.</p>
+<h2 id="publishing-changes">Publishing Changes</h2>
+<p>Now that you know the basics of managing your digital garden using Quartz, you can publish it to the internet!</p>
+<blockquote>
+<p>🌍 Step 5: <a href="/notes/hosting/">Hosting Quartz online!</a></p>
+</blockquote>
+<p>Having problems? Checkout our <a href="/notes/troubleshooting/">FAQ and Troubleshooting guide</a>.</p>
+]]></content:encoded></item><item><title>obsidian</title><link>https://anassawalha95.github.io/garden/notes/obsidian/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anassawalha95.github.io/garden/notes/obsidian/</guid><description>Setup Obsidian is the preferred way to use Quartz. You can either create a new Obsidian Vault or link one that your already have.</description><content:encoded><![CDATA[<h2 id="setup">Setup</h2>
+<p>Obsidian is the preferred way to use Quartz. You can either create a new Obsidian Vault or link one that your already have.</p>
+<h3 id="new-vault">New Vault</h3>
+<p>If you don&rsquo;t have an existing Vault, <a href="https://obsidian.md/">download Obsidian</a> and create a new Vault in the <code>/content</code> folder that you created and cloned during the <a href="/notes/setup/">setup</a> step.</p>
+<h3 id="linking-an-existing-vault">Linking an existing Vault</h3>
+<p>The easiest way to use an existing Vault is to copy all of your files (directory and hierarchies intact) into the <code>/content</code> folder.</p>
+<h2 id="settings">Settings</h2>
+<p>Great, now that you have your Obsidian linked to your Quartz, let&rsquo;s fix some settings so that they play well.</p>
+<p>Open Settings &gt; Files &amp; Links and look for these two items:</p>
+<ol>
+<li>Set the <strong>New link format</strong> to <strong>Absolute Path in vault</strong>. If you have a completely flat vault (no folders), this step isn&rsquo;t necessary.</li>
+<li>Turn <strong>on</strong> the <strong>Automatically update internal links</strong> setting.</li>
+</ol>
+<p><img src="/notes/images%5cobsidian-settings.png" alt="notes/images/obsidian-settings.png"/><em>Obsidian Settings</em></p>
+<h2 id="templates">Templates</h2>
+<p>Inserting front matter everytime you want to create a new Note gets annoying really quickly. Luckily, Obsidian supports templates which makes inserting new content really easily.</p>
+<blockquote>
+<p>[!WARNING]</p>
+<p><strong>If you decide to overwrite the <code>/content</code> folder completely, don&rsquo;t remove the <code>/content/templates</code> folder!</strong></p>
+</blockquote>
+<p>Head over to Options &gt; Core Plugins and enable the Templates plugin. Then go to Options &gt; Hotkeys and set a hotkey for &lsquo;Insert Template&rsquo; (I recommend <code>[cmd]+T</code>). That way, when you create a new note, you can just press the hotkey for a new template and be ready to go!</p>
+<blockquote>
+<p>👀 Step 4: <a href="/notes/preview-changes/">Preview Quartz Changes</a></p>
+</blockquote>
+]]></content:encoded></item><item><title>preview changes</title><link>https://anassawalha95.github.io/garden/notes/preview-changes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anassawalha95.github.io/garden/notes/preview-changes/</guid><description>If you&amp;rsquo;d like to preview what your Quartz site looks like before deploying it to the internet, the following instructions guide you through installing the proper dependencies to run it locally.</description><content:encoded><![CDATA[<p>If you&rsquo;d like to preview what your Quartz site looks like before deploying it to the internet, the following
+instructions guide you through installing the proper dependencies to run it locally.</p>
+<h2 id="install-hugo-obsidian">Install <code>hugo-obsidian</code></h2>
+<p>This step will generate the list of backlinks for Hugo to parse. Ensure you have <a href="https://golang.org/doc/install">Go</a> (&gt;= 1.16) installed.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Install and link `hugo-obsidian` locally</span>
+</span></span><span class="line"><span class="cl">go install github.com/jackyzha0/hugo-obsidian@latest
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If you are running into an error saying that <code>command not found: hugo-obsidian</code>, make sure you set your <code>GOPATH</code> correctly (see [[notes/troubleshooting#<code>command not found: hugo-obsidian</code>|the troubleshooting page]])! This will allow your terminal to correctly recognize hugo-obsidian as an executable.</p>
+<h2 id="installing-hugo">Installing Hugo</h2>
+<p>Hugo is the static site generator that powers Quartz. <a href="https://gohugo.io/getting-started/installing/">Install Hugo with &ldquo;extended&rdquo; Sass/SCSS version</a> first. Then,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Navigate to your local Quartz folder</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> &lt;location-of-your-local-quartz&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Start local server</span>
+</span></span><span class="line"><span class="cl">make serve
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># View your site in a browser at http://localhost:1313/</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>[!INFO] Docker Support</p>
+<p>If you have the Docker CLI installed already, you can avoid installing <code>hugo-obsidian</code> and <code>hugo</code>. Instead, open your terminal, navigate to your folder with Quartz and run <code>make docker</code></p>
+</blockquote>
+<p>Afterwards, start the Hugo server as shown above and your local backlinks and interactive graph should be populated! Now, let&rsquo;s get it hosted online.</p>
+<blockquote>
+<p>🌍 Step 5: <a href="/notes/hosting/">Hosting Quartz online!</a></p>
+</blockquote>
+]]></content:encoded></item><item><title>hosting</title><link>https://anassawalha95.github.io/garden/notes/hosting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anassawalha95.github.io/garden/notes/hosting/</guid><description>Hosting on GitHub Pages Quartz is designed to be effortless to deploy. If you forked and cloned Quartz directly from the repository, everything should already be good to go!</description><content:encoded><![CDATA[<h2 id="hosting-on-github-pages">Hosting on GitHub Pages</h2>
+<p>Quartz is designed to be effortless to deploy. If you forked and cloned Quartz directly from the repository, everything should already be good to go! Follow the steps below.</p>
+<h3 id="enable-github-actions-permissions">Enable GitHub Actions Permissions</h3>
+<p>By default, GitHub disables workflows from modifying your files (for good reason!). However, Quartz needs this to write the actual site files back to GitHub.</p>
+<p>Head to <code>Settings &gt; Action &gt; General &gt; Workflow Permissions</code> and choose <code>Read and Write Permissions</code></p>
+<p><img src="/notes/images%5cgithub-actions.png" alt="notes/images/github-actions.png"/>
+<em>Enable GitHub Actions</em></p>
+<h3 id="enable-github-pages">Enable GitHub Pages</h3>
+<p>Head to the &lsquo;Settings&rsquo; tab of your forked repository and go to the &lsquo;Pages&rsquo; tab.</p>
+<ol>
+<li>(IMPORTANT) Set the source to deploy from <code>master</code> (and not <code>hugo</code>) using <code>/ (root)</code></li>
+<li>Set a custom domain here if you have one!</li>
+</ol>
+<p><img src="/notes//notes/images/github-pages.png" alt="Enable GitHub Pages"/><em>Enable GitHub Pages</em></p>
+<h3 id="pushing-changes">Pushing Changes</h3>
+<p>To see your changes on the internet, we need to push it them to GitHub. Quartz is a <code>git</code> repository so updating it is the same workflow as you would follow as if it were just a regular software project.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># Navigate to Quartz folder</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> &lt;path-to-quartz&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Commit all changes</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;message describing changes&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Push to GitHub to update site</span>
+</span></span><span class="line"><span class="cl">git push origin hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Note: we specifically push to the <code>hugo</code> branch here. Our GitHub action automatically runs everytime a push to is detected to that branch and then updates the <code>master</code> branch for redeployment.</p>
+<h3 id="setting-up-the-site">Setting up the Site</h3>
+<p>Now let&rsquo;s get this site up and running. Never hosted a site before? No problem. Have a fancy custom domain you already own or want to subdomain your Quartz? That&rsquo;s easy too.</p>
+<p>Here, we take advantage of GitHub&rsquo;s free page hosting to deploy our site. Change <code>baseURL</code> in <code>/config.toml</code>.</p>
+<p>Make sure that your <code>baseURL</code> has a trailing <code>/</code>!</p>
+<p><a href="https://github.com/jackyzha0/quartz/blob/hugo/config.toml">Reference <code>config.toml</code> here</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;https://&lt;YOUR-DOMAIN&gt;/&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>If you are using this under a subdomain (e.g. <code>&lt;YOUR-GITHUB-USERNAME&gt;.github.io/quartz</code>), include the trailing <code>/</code>. <strong>You need to do this especially if you are using GitHub!</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s2">&#34;https://&lt;YOUR-GITHUB-USERNAME&gt;.github.io/quartz/&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Change <code>cname</code> in <code>/.github/workflows/deploy.yaml</code>. Again, if you don&rsquo;t have a custom domain to use, you can use <code>&lt;YOUR-USERNAME&gt;.github.io</code>.</p>
+<p>Please note that the <code>cname</code> field should <em>not</em> have any path <code>e.g. end with /quartz</code> or have a trailing <code>/</code>.</p>
+<p><a href="https://github.com/jackyzha0/quartz/blob/hugo/.github/workflows/deploy.yaml">Reference <code>deploy.yaml</code> here</a></p>
+<div class="highlight" title=".github/workflows/deploy.yaml"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl">- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Deploy  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l">peaceiris/actions-gh-pages@v3  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">with</span><span class="p">:</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nt">github_token</span><span class="p">:</span><span class="w"> </span><span class="l">${{ secrets.GITHUB_TOKEN }}</span><span class="w"> </span><span class="c"># this can stay as is, GitHub fills this in for us!</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nt">publish_dir</span><span class="p">:</span><span class="w"> </span><span class="l">./public  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nt">publish_branch</span><span class="p">:</span><span class="w"> </span><span class="l">master</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="nt">cname</span><span class="p">:</span><span class="w"> </span><span class="l">&lt;YOUR-DOMAIN&gt;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>Have a custom domain? <a href="/notes/custom-Domain/">Learn how to set it up with Quartz </a>.</p>
+<h3 id="ignoring-files">Ignoring Files</h3>
+<p>Only want to publish a subset of all of your notes? Don&rsquo;t worry, Quartz makes this a simple two-step process.</p>
+<p>❌ <a href="/notes/ignore-notes/">Excluding pages from being published</a></p>
+<h2 id="docker-support">Docker Support</h2>
+<p>If you don&rsquo;t want to use a hosting service, you can host using <a href="/notes/docker/">Docker</a> instead!
+I would <em>not use this method</em> unless you know what you are doing.</p>
+<hr>
+<p>Now that your Quartz is live, let&rsquo;s figure out how to make Quartz really <em>yours</em>!</p>
+<blockquote>
+<p>Step 6: 🎨 <a href="/notes/config/">Customizing Quartz</a></p>
+</blockquote>
+<p>Having problems? Checkout our <a href="/notes/troubleshooting/">FAQ and Troubleshooting guide</a>.</p>
+]]></content:encoded></item><item><title>config</title><link>https://anassawalha95.github.io/garden/notes/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anassawalha95.github.io/garden/notes/config/</guid><description>Configuration Quartz is designed to be extremely configurable. You can find the bulk of the configuration scattered throughout the repository depending on how in-depth you&amp;rsquo;d like to get.</description><content:encoded><![CDATA[<h2 id="configuration">Configuration</h2>
+<p>Quartz is designed to be extremely configurable. You can find the bulk of the configuration scattered throughout the repository depending on how in-depth you&rsquo;d like to get.</p>
+<p>The majority of configuration can be found under <code>data/config.yaml</code>. An annotated example configuration is shown below.</p>
+<div class="highlight" title="data/config.yaml"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># The name to display in the footer</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">Jacky Zhao</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># whether to globally show the table of contents on each page</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># this can be turned off on a per-page basis by adding this to the</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># front-matter of that note</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableToc</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># whether to by-default open or close the table of contents on each page</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">openToc</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># whether to display on-hover link preview cards</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableLinkPreview</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># whether to render titles for code blocks</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableCodeBlockTitle</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># whether to render copy buttons for code blocks</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableCodeBlockCopy</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># whether to render callouts</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableCallouts</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># whether to try to process Latex</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableLatex</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># whether to enable single-page-app style rendering</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># this prevents flashes of unstyled content and improves</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># smoothness of Quartz. More info in issue #109 on GitHub</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableSPA</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># whether to render a footer</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableFooter</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># whether backlinks of pages should show the context in which</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># they were mentioned</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableContextualBacklinks</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># whether to show a section of recent notes on the home page</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableRecentNotes</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># whether to display an &#39;edit&#39; button next to the last edited field</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># that links to github</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableGitHubEdit</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">GitHubLink</span><span class="p">:</span><span class="w"> </span><span class="l">https://github.com/jackyzha0/quartz/tree/hugo/content</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># whether to render mermaid diagrams</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableMermaid</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># whether to use Operand to power semantic search</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># IMPORTANT: replace this API key with your own if you plan on using</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># Operand search!</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">search</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">enableSemanticSearch</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">operandApiKey</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;REPLACE-WITH-YOUR-OPERAND-API-KEY&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">operandIndexId</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;REPLACE-WITH-YOUR-OPERAND-INDEX-ID&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># page description used for SEO</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">description</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="l">Host your second brain and digital garden for free. Quartz features extremely fast full-text search,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="l">Wikilink support, backlinks, local graph, tags, and link previews.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># title of the home page (also for SEO)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">page_title</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="s2">&#34;🪴 Quartz 3.3&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># links to show in the footer</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">links</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">link_name</span><span class="p">:</span><span class="w"> </span><span class="l">Twitter</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="l">https://twitter.com/_jzhao</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">link_name</span><span class="p">:</span><span class="w"> </span><span class="l">Github</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">link</span><span class="p">:</span><span class="w"> </span><span class="l">https://github.com/jackyzha0</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="code-block-titles">Code Block Titles</h3>
+<p>To add code block titles with Quartz:</p>
+<ol>
+<li>
+<p>Ensure that code block titles are enabled in Quartz&rsquo;s configuration:</p>
+<div class="highlight" title="data/config.yaml"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">enableCodeBlockTitle</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span></code></pre></div></li>
+<li>
+<p>Add the <code>title</code> attribute to the desired <a href="https://gohugo.io/content-management/syntax-highlighting/#highlighting-in-code-fences">code block
+fence</a>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl"> ```yaml {title=&#34;data/config.yaml&#34;}
+</span></span><span class="line"><span class="cl"> enableCodeBlockTitle: true  # example from step 1
+</span></span></code></pre></div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<p><strong>Note</strong> that if <code>{title=&lt;my-title&gt;}</code> is included, and code block titles are not
+enabled, no errors will occur, and the title attribute will be ignored.</p>
+<h3 id="html-favicons">HTML Favicons</h3>
+<p>If you would like to customize the favicons of your Quartz-based website, you
+can add them to the <code>data/config.yaml</code> file. The <strong>default</strong> without any set
+<code>favicon</code> key is:</p>
+<div class="highlight" title="layouts/partials/head.html"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;shortcut icon&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;icon.png&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;image/png&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The default can be overridden by defining a value to the <code>favicon</code> key in your
+<code>data/config.yaml</code> file. For example, here is a <code>List[Dictionary]</code> example format, which is
+equivalent to the default:</p>
+<div class="highlight" title="data/config.yaml"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">favicon</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- {<span class="w"> </span><span class="nt">rel</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;shortcut icon&#34;</span><span class="nt">, href</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;icon.png&#34;</span><span class="nt">, type</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;image/png&#34;</span><span class="w"> </span>}<span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">#  - { ... } # Repeat for each additional favicon you want to add</span><span class="w">
+</span></span></span></code></pre></div><p>In this format, the keys are identical to their HTML representations.</p>
+<p>If you plan to add multiple favicons generated by a website (see list below), it
+may be easier to define it as HTML. Here is an example which appends the
+<strong>Apple touch icon</strong> to Quartz&rsquo;s default favicon:</p>
+<div class="highlight" title="data/config.yaml"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">favicon</span><span class="p">:</span><span class="w"> </span><span class="p">|</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">  &lt;link rel=&#34;shortcut icon&#34; href=&#34;icon.png&#34; type=&#34;image/png&#34;&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sd">  &lt;link rel=&#34;apple-touch-icon&#34; sizes=&#34;180x180&#34; href=&#34;../../apple-touch-icon.png&#34;&gt;</span><span class="w">  
+</span></span></span></code></pre></div><p>This second favicon will now be used as a web page icon when someone adds your
+webpage to the home screen of their Apple device. If you are interested in more
+information about the current and past standards of favicons, you can read
+<a href="https://www.emergeinteractive.com/insights/detail/the-essentials-of-favicons/">this article</a>.</p>
+<p><strong>Note</strong> that all generated favicon paths, defined by the <code>href</code>
+attribute, are relative to the <code>static/</code> directory.</p>
+<h3 id="graph-view">Graph View</h3>
+<p>To customize the Interactive Graph view, you can poke around <code>data/graphConfig.yaml</code>.</p>
+<div class="highlight" title="data/graphConfig.yaml"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># if true, a Global Graph will be shown on home page with full width, no backlink.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># A different set of Local Graphs will be shown on sub pages.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># if false, Local Graph will be default on every page as usual</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">enableGlobalGraph</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">### Local Graph ###</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">localGraph</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># whether automatically generate a legend</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">enableLegend</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># whether to allow dragging nodes in the graph</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">enableDrag</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># whether to allow zooming and panning the graph</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">enableZoom</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># how many neighbours of the current node to show (-1 is all nodes)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">depth</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># initial zoom factor of the graph</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">scale</span><span class="p">:</span><span class="w"> </span><span class="m">1.2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># how strongly nodes should repel each other</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">repelForce</span><span class="p">:</span><span class="w"> </span><span class="m">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># how strongly should nodes be attracted to the center of gravity</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">centerForce</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># what the default link length should be</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">linkDistance</span><span class="p">:</span><span class="w"> </span><span class="m">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># how big the node labels should be</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">fontSize</span><span class="p">:</span><span class="w"> </span><span class="m">0.6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c"># scale at which to start fading the labes on nodes</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">opacityScale</span><span class="p">:</span><span class="w"> </span><span class="m">3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">### Global Graph ###</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">globalGraph</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="c"># same settings as above</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">### For all graphs ###</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># colour specific nodes path off of their path</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">paths</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">/moc</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;#4388cc&#34;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="styling">Styling</h2>
+<p>Want to go even more in-depth? You can add custom CSS styling and change existing colours through editing <code>assets/styles/custom.scss</code>. If you&rsquo;d like to target specific parts of the site, you can add ids and classes to the HTML partials in <code>/layouts/partials</code>.</p>
+<h3 id="partials">Partials</h3>
+<p>Partials are what dictate what gets rendered to the page. Want to change how pages are styled and structured? You can edit the appropriate layout in <code>/layouts</code>.</p>
+<p>For example, the structure of the home page can be edited through <code>/layouts/index.html</code>. To customize the footer, you can edit <code>/layouts/partials/footer.html</code></p>
+<p>More info about partials on <a href="https://gohugo.io/templates/partials/">Hugo&rsquo;s website.</a></p>
+<p>Still having problems? Checkout our <a href="/notes/troubleshooting/">FAQ and Troubleshooting guide</a>.</p>
+<h2 id="language-support">Language Support</h2>
+<p><a href="/notes/CJK-&#43;-Latex-Support-%E6%B5%8B%E8%AF%95/">CJK + Latex Support (测试)</a> comes out of the box with Quartz.</p>
+<p>Want to support languages that read from right-to-left (like Arabic)? Hugo (and by proxy, Quartz) supports this natively.</p>
+<p>Follow the steps <a href="https://gohugo.io/content-management/multilingual/#configure-languages">Hugo provides here</a> and modify your <code>config.toml</code></p>
+<p>For example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">defaultContentLanguage</span> <span class="p">=</span> <span class="s1">&#39;ar&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">languages</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">languages</span><span class="p">.</span><span class="nx">ar</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">languagedirection</span> <span class="p">=</span> <span class="s1">&#39;rtl&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;مدونتي&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">weight</span> <span class="p">=</span> <span class="mi">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>]]></content:encoded></item><item><title>docker</title><link>https://anassawalha95.github.io/garden/notes/docker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://anassawalha95.github.io/garden/notes/docker/</guid><description>If you want to host Quartz on a machine without using a webpage hosting service, it may be easier to install Docker Compose and follow the instructions below than to install Quartz&amp;rsquo;s dependencies manually.</description><content:encoded><![CDATA[<p>If you want to host Quartz on a machine without using a webpage hosting service, it may be easier to <a href="https://docs.docker.com/compose/install/">install Docker Compose</a> and follow the instructions below than to <a href="/notes/preview-changes/">install Quartz&rsquo;s dependencies manually</a>.</p>
+<h2 id="hosting-quartz-locally">Hosting Quartz Locally</h2>
+<p>You can serve Quartz locally at <code>http://localhost:1313</code> with the following script, replacing <code>/path/to/quartz</code> with the
+actual path to your Quartz folder.</p>
+<p>docker-compose.yml</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">services:
+</span></span><span class="line"><span class="cl">  quartz-hugo:
+</span></span><span class="line"><span class="cl">    image: ghcr.io/jackyzha0/quartz:hugo
+</span></span><span class="line"><span class="cl">    container_name: quartz-hugo
+</span></span><span class="line"><span class="cl">    volumes:
+</span></span><span class="line"><span class="cl">      - /path/to/quartz:/quartz
+</span></span><span class="line"><span class="cl">    ports:
+</span></span><span class="line"><span class="cl">      - 1313:1313
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # optional
+</span></span><span class="line"><span class="cl">    environment:
+</span></span><span class="line"><span class="cl">      - HUGO_BIND=0.0.0.0
+</span></span><span class="line"><span class="cl">      - HUGO_BASEURL=http://localhost
+</span></span><span class="line"><span class="cl">      - HUGO_PORT=1313
+</span></span><span class="line"><span class="cl">      - HUGO_APPENDPORT=true
+</span></span><span class="line"><span class="cl">      - HUGO_LIVERELOADPORT=-1
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Then run with: <code>docker-compose up -d</code> in the same directory as your <code>docker-compose.yml</code> file.</p>
+<p>While the container is running, you can update the <code>quartz</code> fork with: <code>docker exec -it quartz-hugo make update</code>.</p>
+<h2 id="exposing-your-container-to-the-internet">Exposing Your Container to the Internet</h2>
+<h3 id="to-your-public-ip-address-with-port-forwarding-insecure">To Your Public IP Address with Port Forwarding (insecure)</h3>
+<p>Assuming you are already familiar with <a href="https://en.wikipedia.org/wiki/Port_forwarding">port forwarding</a> and <a href="https://portforward.com">setting it up with your router model</a>:</p>
+<ol>
+<li>You should set the environment variable <code>HUGO_BASEURL=http://your-public-ip</code> and then start your container.</li>
+<li>Set up port forwarding on your router from port <code>p</code> to <code>your-local-ip:1313</code>.</li>
+<li>You should now be able to access Quartz from outside your local network at <code>http://your-public-ip:p</code>.</li>
+</ol>
+<p>However, your HTTP connection will be unencrypted and <strong>this method is not secure</strong>.</p>
+<h3 id="to-a-domain-using-cloudflare-proxy">To a Domain using Cloudflare Proxy</h3>
+<ol>
+<li>Port forward 443 (HTTPS) from your machine.</li>
+<li>Buy a custom domain (say, <code>your-domain.com</code>) from <a href="https://www.cloudflare.com/products/registrar/">Cloudflare</a>. Point a DNS A record from <code>your-domain.com</code> to your public IP address and enable the proxy.</li>
+<li>Set the environment variables <code>HUGO_BASEURL=https://your-domain.com</code>, <code>HUGO_PORT=443</code>, and <code>HUGO_APPENDPORT=false</code>. Change <code>1313:1313</code> to <code>443:443</code> for the <code>ports</code> in <code>docker-compose.yml</code>.</li>
+<li>Spin up your Quartz container and enjoy it at <code>https://your-domain.com</code>!</li>
+</ol>
+<h3 id="to-a-domain-using-a-reverse-proxy">To a Domain using a Reverse Proxy</h3>
+<p>If you want to serve more than just Quartz to the internet on this machine (or don&rsquo;t want to use the Cloudflare registrar and proxy), you should follow the steps in the section above (as appropriate) and also set up a reverse proxy, like <a href="https://doc.traefik.io/traefik">Traefik</a>. Be sure to configure your TLS certificates too!</p>
+]]></content:encoded></item></channel></rss>
