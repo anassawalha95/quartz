@@ -31,9 +31,7 @@ jobs:
         run: hugo --minify
         continue-on-error: true
 
-      - name: push to the gardin 
-        run: hugo --minify
-        continue-on-error: true
+      - name: push to the garden
         shell: bash
         run: |
           git add .
