@@ -1,10 +1,10 @@
 .DS_Store
-public
-public/*
+#public
+#public/*
 node_modules
 resources
 .idea
 assets/indices/linkIndex.json
 assets/indices/contentIndex.json
-content/.obsidian
-content/*
+#content/.obsidian
+#content/*
