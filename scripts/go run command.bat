@@ -1,1 +1,0 @@
-go run c:\Users\User\Desktop\Obsidian\hugo-obsidian -input=c:\Users\User\Desktop\Obsidian\quartz\content -output=c:\Users\User\Desktop\Obsidian\quartz\assets\indices -index -root=c:\Users\User\Desktop\Obsidian\quartz 

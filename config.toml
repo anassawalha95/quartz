@@ -1,4 +1,4 @@
-
+baseURL = "https://anassawalha95.github.io/garden/"
 languageCode = "en-us"
 enableEmoji = true
 relativeURLs = true
