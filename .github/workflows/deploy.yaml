@@ -33,9 +33,7 @@ jobs:
       - name: clean up previous public folder
         shell: bash
         run: |
-          ls  src/public/*   
-          rm -rf src/public/*  
-          ls  src/public/*
+          ls  src
 
       - name: Build
         continue-on-error: true
