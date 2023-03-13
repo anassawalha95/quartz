@@ -30,11 +30,6 @@ jobs:
           hugo-version: "0.96.0"
           extended: true
 
-      - name: clean up previous public folder
-        shell: bash
-        run: |
-          ls  src
-
       - name: Build
         continue-on-error: true
         working-directory: src
@@ -49,6 +44,13 @@ jobs:
           token: ${{ secrets.DEPLOY_TOKEN }}
           persist-credentials: true
           fetch-depth: 0
+
+      - name: clean up previous public folder
+        shell: bash
+        run: |
+          ls  dest
+          rm -rf dest/*
+          ls  dest
 
       - name: Copy Public Folder to Another Github Repo
         shell: bash
