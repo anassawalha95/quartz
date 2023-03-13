@@ -24,8 +24,8 @@ jobs:
         uses: jackyzha0/hugo-obsidian@v2.18
         with:
           index: true
-          input: content
-          output: assets/indices
+          input: src/content
+          output: src/assets/indices
           root: src
 
       # - name: Setup Hugo
