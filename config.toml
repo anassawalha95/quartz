@@ -38,7 +38,7 @@ enableGitInfo = true
             taskList = true
             typographer = true
         [markup.goldmark.parser]
-            autoHeadingID = true
+            autoHeadingID = false
             autoHeadingIDType = 'github'
             wrapStandAloneImageWithinParagraph = true
             [markup.goldmark.parser.attribute]
