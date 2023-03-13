@@ -38,7 +38,9 @@ jobs:
 
       - name: Copy submodel files
         run: |
-          ls -l -a
+          ls 
+          cd .. 
+          ls 
           cp -R public garden
 
       - name: Commit changes
