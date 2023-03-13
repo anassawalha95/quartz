@@ -13,23 +13,23 @@ jobs:
         with:
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
-      # - name: Build Link Index
-      #   uses: jackyzha0/hugo-obsidian@v2.18
-      #   with:
-      #     index: true
-      #     input: content
-      #     output: assets/indices
-      #     root: .
+      - name: Build Link Index
+        uses: jackyzha0/hugo-obsidian@v2.18
+        with:
+          index: true
+          input: content
+          output: assets/indices
+          root: .
 
-      # - name: Setup Hugo
-      #   uses: peaceiris/actions-hugo@v2
-      #   with:
-      #     hugo-version: "0.96.0"
-      #     extended: true
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.96.0"
+          extended: true
 
-      # - name: Build
-      #   continue-on-error: true
-      #   run: hugo --minify -d ./public
+      - name: Build
+        continue-on-error: true
+        run: hugo --minify -d ./public
 
       - name: Clone Another Github Repo
         uses: actions/checkout@v2
