@@ -45,9 +45,9 @@ jobs:
           path: dest
           ref: main
           repository: anassawalha95/garden
-          repo-token: ${{ secrets.DEPLOY_TOKEN }}
-          persist-credentials: true
+          token: ${{ secrets.DEPLOY_TOKEN }}
           fetch-depth: 0
+          persist-credentials: true
 
       - name: Copy Public Folder to Another Github Repo
         shell: bash
@@ -57,7 +57,7 @@ jobs:
         working-directory: dest
         run: |
           git config --global user.name "anassawalha95"
-          git config --global user.email "anas.swalha@yahoo.com" "${{ secrets.DEPLOY_TOKEN }}"
+          git config --global user.email "anas.swalha@yahoo.com"
           git add .
           git commit -m "Deploy to Github Pages"
           git push origin HEAD:main
