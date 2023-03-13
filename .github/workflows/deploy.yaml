@@ -37,7 +37,7 @@ jobs:
           ssh-strict: false
           set-safe-directory: false
           repository: anassawalha95/garden
-          token: ${{ github.secrets.DEPLOY_TOKEN }}
+          repo-token: ${{ secrets.DEPLOY_TOKEN }}
           path: ./deploy-repo
 
       - name: Copy Public Folder to Another Github Repo
