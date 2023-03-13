@@ -5,14 +5,14 @@ enableLinkPreview: true
 enableLatex: true
 enableCodeBlockTitle: true
 enableCodeBlockCopy: false
-enableCallouts: false
-enableSPA: false
+enableCallouts: true
+enableSPA: true
 enableFooter: true
 enableContextualBacklinks: true
 enableRecentNotes: false
 enableGitHubEdit: false
 enableMermaid: false
-enableBackLinks: true
+enableBackLinks: false
 GitHubLink: https://github.com/anassawalha95/garden
 search:
   enableSemanticSearch: false

@@ -1,5 +1,5 @@
 ---
-title: index
+title: Home
 enableToc: false
 enablebacklinks: false
 ---
