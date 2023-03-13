@@ -45,10 +45,14 @@ jobs:
 
       - name: Commit and Push to Another Github Repo
         working-directory: ./deploy-repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
         run: |
+          git config --global user.email "anas.swalha@yahoo.com"
+          git config --global user.name "anassawalha95"
           git add .
           git commit -m "Deploy to Github Pages"
-          git push
+          git push origin HEAD:main
 
 # name: Deploy to GitHub Pages
 
