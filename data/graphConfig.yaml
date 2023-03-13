@@ -34,5 +34,4 @@ globalGraph:
 ### For all graphs ###
 
 paths:
-  - /: "#4388cc"
   - /notes: "#4388cc"
