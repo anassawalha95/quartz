@@ -33,6 +33,10 @@ jobs:
         with:
           hugo-version: "0.96.0"
           extended: true
+          
+      - name: clean up previous public folder
+        shell: bash
+        run: rm -rf src/public/*
 
       - name: Build
         continue-on-error: true
@@ -51,9 +55,7 @@ jobs:
 
       - name: Copy Public Folder to Another Github Repo
         shell: bash
-        run: |
-          rm -rf src/public/*
-          cp -r src/public/* dest
+        run: cp -r src/public/* dest
 
       - name: Commit and Push to Another Github Repo
         working-directory: dest
