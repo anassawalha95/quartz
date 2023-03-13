@@ -34,7 +34,7 @@ jobs:
       - name: Clone submodel repository
         uses: actions/checkout@v2
         with:
-          repository: https://github.com/anassawalha95/garden.git
+          repository: git@github.com:anassawalha95/garden.git
           ref: main
 
       - name: Copy submodel files
