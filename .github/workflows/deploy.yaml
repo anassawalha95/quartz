@@ -68,9 +68,8 @@ jobs:
           git config --global user.name "anassawalha95"
           git config --global user.email "anas.swalha@yahoo.com" "${{ secrets.DEPLOY_TOKEN }}"
           git add .
-          git commit -m "Deploy to Github Pages"
-          git push origin HEAD:main
-        needs: Copy Public Folder to Another Github Repo
+          git commit -m "Deploy to Github Pages
+
 # name: Deploy to Another Github Repo
 
 # on:
