@@ -1,7 +1,13 @@
+name: Deploy to Another Github Repo
+
+on:
+  push:
+    branches:
+      - hugo
+
 jobs:
   deploy:
     runs-on: ubuntu-20.04
-    needs: fetching-code
     steps:
       - name: fetching code
         uses: actions/checkout@v2
@@ -15,9 +21,9 @@ jobs:
           ls
           cd src 
           ls
+        needs: fetching code
 
       - name: Build Link Index
-        needs: fetching-code
         uses: jackyzha0/hugo-obsidian@v2.18
         with:
           path: src
@@ -25,17 +31,20 @@ jobs:
           input: content
           output: assets/indices
           root: src
+        needs: view
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: "0.96.0"
           extended: true
+        needs: Build Link Index
 
       - name: Build
         continue-on-error: true
         working-directory: src
         run: hugo --minify -d ./public
+        needs: Setup Hugo
 
       - name: Clone Another Github Repo
         uses: actions/checkout@v3
@@ -46,10 +55,12 @@ jobs:
           token: ${{ secrets.DEPLOY_TOKEN }}
           persist-credentials: true
           fetch-depth: 0
+        needs: Build
 
       - name: Copy Public Folder to Another Github Repo
         shell: bash
         run: cp -r src/public/* dest
+        needs: Clone Another Github Repo
 
       - name: Commit and Push to Another Github Repo
         working-directory: dest
@@ -59,7 +70,7 @@ jobs:
           git add .
           git commit -m "Deploy to Github Pages"
           git push origin HEAD:main
-
+        needs: Copy Public Folder to Another Github Repo
 # name: Deploy to Another Github Repo
 
 # on:
