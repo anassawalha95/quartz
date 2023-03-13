@@ -13,23 +13,23 @@ jobs:
         with:
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod .
 
-      - name: Build Link Index
-        uses: jackyzha0/hugo-obsidian@v2.18
-        with:
-          index: true
-          input: content
-          output: assets/indices
-          root: .
+      # - name: Build Link Index
+      #   uses: jackyzha0/hugo-obsidian@v2.18
+      #   with:
+      #     index: true
+      #     input: content
+      #     output: assets/indices
+      #     root: .
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: "0.96.0"
-          extended: true
+      # - name: Setup Hugo
+      #   uses: peaceiris/actions-hugo@v2
+      #   with:
+      #     hugo-version: "0.96.0"
+      #     extended: true
 
-      - name: Build
-        run: hugo --minify
-        continue-on-error: true
+      # - name: Build
+      #   run: hugo --minify
+      #   continue-on-error: true
 
       - name: cmd
         run: |
