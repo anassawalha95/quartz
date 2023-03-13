@@ -1,15 +1,10 @@
-name: Deploy to Another Github Repo
-
-on:
-  push:
-    branches:
-      - hugo
-
 jobs:
   deploy:
     runs-on: ubuntu-20.04
+    needs: fetching-code
     steps:
-      - uses: actions/checkout@v2
+      - name: fetching code
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
           path: src
@@ -20,7 +15,9 @@ jobs:
           ls
           cd src 
           ls
+
       - name: Build Link Index
+        needs: fetching-code
         uses: jackyzha0/hugo-obsidian@v2.18
         with:
           path: src
