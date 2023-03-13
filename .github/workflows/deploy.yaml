@@ -30,13 +30,11 @@ jobs:
       # - name: Build
       #   continue-on-error: true
       #   run: hugo --minify
-      - name: Clone Another Github Repo
-        run: |
-          echo ${{ secrets.TOKEN }}
 
       - name: Clone Another Github Repo
         uses: actions/checkout@v2
         with:
+          ssh-strict: false
           repository: anassawalha95/garden
           token: ${{ secrets.DEPLOY_TOKEN }}
           path: ./deploy-repo
