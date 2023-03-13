@@ -2,7 +2,7 @@
 title: config
 tags:
   - setup
-weight: 0
+weight: 1
 ---
 
 ## Configuration
