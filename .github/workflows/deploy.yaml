@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: fetch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
@@ -46,8 +46,12 @@ jobs:
         shell: bash
         run: |
           rm -rf dest/*
+          ls 
+          ls public
+          ls public/assets/indices
           cp -r public/* dest
-          ls dest/assets/indices/
+          ls dest/assets
+          ls dest/assets/indices
 
       - name: Commit and Push to Another Github Repo
         working-directory: dest
