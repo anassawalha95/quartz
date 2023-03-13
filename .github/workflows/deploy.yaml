@@ -35,7 +35,7 @@ jobs:
         run: |
           pwd
           ls
-          cd ./public 
+          cd public 
           git add . 
           git commit -m "new publish"
           git push origin main
