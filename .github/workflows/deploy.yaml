@@ -46,8 +46,6 @@ jobs:
       - name: Commit and Push to Another Github Repo
         working-directory: ./deploy-repo
         run: |
-          git config --global user.email "anas.swalha@yahoo.com"
-          git config --global user.name "anassawalha95"
           git add .
           git commit -m "Deploy to Github Pages"
           git push
