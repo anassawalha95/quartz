@@ -16,13 +16,6 @@ jobs:
           path: src
           persist-credentials: false
 
-      - name: clean up previous public folder
-        shell: bash
-        run: |
-          ls  src/public/*   
-          rm -rf src/public/*  
-          ls  src/public/*
-
       - name: Build Link Index
         uses: jackyzha0/hugo-obsidian@v2.18
         with:
@@ -31,16 +24,18 @@ jobs:
           output: src/assets/indices
           root: src
 
+      - name: clean up previous public folder
+        shell: bash
+        run: |
+          ls  src/public/*   
+          rm -rf src/public/*  
+          ls  src/public/*
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: "0.96.0"
           extended: true
-
-      - name: clean up previous public folder
-        shell: bash
-        run: |
-          rm -rf src/public/*
 
       - name: Build
         continue-on-error: true
