@@ -13,8 +13,7 @@ jobs:
         with:
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
           path: src
-          ref: hugo
-          persist-credentials: false
+
       - name: view
         run: |
           ls
