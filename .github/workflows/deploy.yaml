@@ -30,7 +30,7 @@ jobs:
       # - name: Build
       #   continue-on-error: true
       #   run: hugo --minify
-     - name: Clone Another Github Repo
+      - name: Clone Another Github Repo
          run: |
           echo ${{ secrets.TOKEN }}
 
