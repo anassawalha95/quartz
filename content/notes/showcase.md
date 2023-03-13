@@ -1,5 +1,6 @@
 ---
 title: showcase
+weight: 1
 ---
 
 Want to see what Quartz can do? Here are some cool community gardens :)

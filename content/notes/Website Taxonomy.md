@@ -1,8 +1,7 @@
 ---
 title: Website Taxonomy
 enableToc: false
-tags:
-  - ~
+weight: 1
 ---
 
 *Created*: *2023-03-10*

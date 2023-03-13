@@ -1,5 +1,6 @@
 ---
 title: custom Domain
+weight: 1
 ---
 
 ### Registrar

@@ -2,7 +2,7 @@
 title: preview changes
 tags:
   - setup
-weight: -2
+weight: 1
 ---
 
 If you'd like to preview what your Quartz site looks like before deploying it to the internet, the following
