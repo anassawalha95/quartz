@@ -1,11 +1,16 @@
 {
   "index": {
     "links": {
-      "c/Users/User/Desktop/ObsidianB/quartz/content/": [
+      "c/Users/User/Desktop/ObsidianB/quartz/content": [
         {
-          "source": "c/Users/User/Desktop/ObsidianB/quartz/content/",
+          "source": "c/Users/User/Desktop/ObsidianB/quartz/content",
           "target": "/notes%5CReal-Estate-Development",
           "text": "Real Estate Development"
+        },
+        {
+          "source": "c/Users/User/Desktop/ObsidianB/quartz/content",
+          "target": "/notes%5CGnosis%5CContact-%F0%9F%97%BA%EF%B8%8F%E2%9A%9B%EF%B8%8F",
+          "text": "Contact 🗺️⚛️"
         }
       ],
       "c/Users/User/Desktop/ObsidianB/quartz/content/notes/CJK-+-Latex-Support-测试": [
@@ -461,9 +466,16 @@
           "text": "excluding pages from being published"
         }
       ],
+      "/notes%5CGnosis%5CContact-%F0%9F%97%BA%EF%B8%8F%E2%9A%9B%EF%B8%8F": [
+        {
+          "source": "c/Users/User/Desktop/ObsidianB/quartz/content",
+          "target": "/notes%5CGnosis%5CContact-%F0%9F%97%BA%EF%B8%8F%E2%9A%9B%EF%B8%8F",
+          "text": "Contact 🗺️⚛️"
+        }
+      ],
       "/notes%5CReal-Estate-Development": [
         {
-          "source": "c/Users/User/Desktop/ObsidianB/quartz/content/",
+          "source": "c/Users/User/Desktop/ObsidianB/quartz/content",
           "target": "/notes%5CReal-Estate-Development",
           "text": "Real Estate Development"
         }
@@ -525,9 +537,14 @@
   },
   "links": [
     {
-      "source": "c/Users/User/Desktop/ObsidianB/quartz/content/",
+      "source": "c/Users/User/Desktop/ObsidianB/quartz/content",
       "target": "/notes%5CReal-Estate-Development",
       "text": "Real Estate Development"
+    },
+    {
+      "source": "c/Users/User/Desktop/ObsidianB/quartz/content",
+      "target": "/notes%5CGnosis%5CContact-%F0%9F%97%BA%EF%B8%8F%E2%9A%9B%EF%B8%8F",
+      "text": "Contact 🗺️⚛️"
     },
     {
       "source": "c/Users/User/Desktop/ObsidianB/quartz/content/notes/CJK-+-Latex-Support-测试",
