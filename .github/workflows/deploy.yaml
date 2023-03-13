@@ -9,60 +9,60 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
-      - name: fetch
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
-          path: src
-          persist-credentials: false
+      # - name: fetch
+      #   uses: actions/checkout@v2
+      #   with:
+      #     fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+      #     path: src
+      #     persist-credentials: false
 
       - name: view
         run: |
           ls
           cd src 
           ls
-      - name: Build Link Index
-        uses: jackyzha0/hugo-obsidian@v2.18
-        with:
-          path: src
-          index: true
-          input: content
-          output: assets/indices
-          root: /home/src
+      # - name: Build Link Index
+      #   uses: jackyzha0/hugo-obsidian@v2.18
+      #   with:
+      #     path: src
+      #     index: true
+      #     input: content
+      #     output: assets/indices
+      #     root: /home/src
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: "0.96.0"
-          extended: true
+      # - name: Setup Hugo
+      #   uses: peaceiris/actions-hugo@v2
+      #   with:
+      #     hugo-version: "0.96.0"
+      #     extended: true
 
-      - name: Build
-        continue-on-error: true
-        working-directory: src
-        run: hugo --minify -d ./public
+      # - name: Build
+      #   continue-on-error: true
+      #   working-directory: src
+      #   run: hugo --minify -d ./public
 
-      - name: Clone Another Github Repo
-        uses: actions/checkout@v3
-        with:
-          path: dest
-          ref: main
-          repository: anassawalha95/garden
-          token: ${{ secrets.DEPLOY_TOKEN }}
-          persist-credentials: true
-          fetch-depth: 0
+      # - name: Clone Another Github Repo
+      #   uses: actions/checkout@v3
+      #   with:
+      #     path: dest
+      #     ref: main
+      #     repository: anassawalha95/garden
+      #     token: ${{ secrets.DEPLOY_TOKEN }}
+      #     persist-credentials: true
+      #     fetch-depth: 0
 
-      - name: Copy Public Folder to Another Github Repo
-        shell: bash
-        run: cp -r src/public/* dest
+      # - name: Copy Public Folder to Another Github Repo
+      #   shell: bash
+      #   run: cp -r src/public/* dest
 
-      - name: Commit and Push to Another Github Repo
-        working-directory: dest
-        run: |
-          git config --global user.name "anassawalha95"
-          git config --global user.email "anas.swalha@yahoo.com" "${{ secrets.DEPLOY_TOKEN }}"
-          git add .
-          git commit -m "Deploy to Github Pages"
-          git push origin HEAD:main
+      # - name: Commit and Push to Another Github Repo
+      #   working-directory: dest
+      #   run: |
+      #     git config --global user.name "anassawalha95"
+      #     git config --global user.email "anas.swalha@yahoo.com" "${{ secrets.DEPLOY_TOKEN }}"
+      #     git add .
+      #     git commit -m "Deploy to Github Pages"
+      #     git push origin HEAD:main
 
 #   job2:
 # name: Deploy to Another Github Repo
