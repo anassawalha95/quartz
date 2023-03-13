@@ -40,8 +40,9 @@ jobs:
         run: |
           ls 
           cd .. 
+          pwd
           ls 
-          cp -R public garden
+          cp -R ../../public ../../garden
 
       - name: Commit changes
         run: |
