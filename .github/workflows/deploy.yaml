@@ -51,7 +51,9 @@ jobs:
 
       - name: Copy Public Folder to Another Github Repo
         shell: bash
-        run: cp -r src/public/* dest
+        run: |
+          rm -rf src/public/*
+          cp -r src/public/* dest
 
       - name: Commit and Push to Another Github Repo
         working-directory: dest
