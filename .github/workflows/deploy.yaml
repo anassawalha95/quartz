@@ -18,6 +18,8 @@ jobs:
       - name: view
         run: |
           ls
+          cd src 
+          ls
       - name: Build Link Index
         uses: jackyzha0/hugo-obsidian@v2.18
         with:
