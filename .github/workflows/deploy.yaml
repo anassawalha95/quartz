@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - hugo
-
+needs: [fetch]
 jobs:
   fetch:
     runs-on: ubuntu-20.04
@@ -21,12 +21,9 @@ jobs:
           ls
           cd src 
           ls
-        needs: fetching code
 
-      
-   deploy:
-     runs-on: ubuntu-20.04
-     steps:
+  deploy:
+    runs-on: ubuntu-20.04
       - name: Build Link Index
         uses: jackyzha0/hugo-obsidian@v2.18
         with:
@@ -35,20 +32,18 @@ jobs:
           input: content
           output: assets/indices
           root: src
-        needs: view
+      
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: "0.96.0"
           extended: true
-        needs: Build Link Index
 
       - name: Build
         continue-on-error: true
         working-directory: src
         run: hugo --minify -d ./public
-        needs: Setup Hugo
 
       - name: Clone Another Github Repo
         uses: actions/checkout@v3
@@ -59,12 +54,10 @@ jobs:
           token: ${{ secrets.DEPLOY_TOKEN }}
           persist-credentials: true
           fetch-depth: 0
-        needs: Build
 
       - name: Copy Public Folder to Another Github Repo
         shell: bash
         run: cp -r src/public/* dest
-        needs: Clone Another Github Repo
 
       - name: Commit and Push to Another Github Repo
         working-directory: dest
@@ -72,7 +65,9 @@ jobs:
           git config --global user.name "anassawalha95"
           git config --global user.email "anas.swalha@yahoo.com" "${{ secrets.DEPLOY_TOKEN }}"
           git add .
-          git commit -m "Deploy to Github Pages
+          git commit -m "Deploy to Github Pages"
+          git push origin HEAD:main
+
 
 # name: Deploy to Another Github Repo
 
