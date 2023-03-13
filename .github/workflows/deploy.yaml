@@ -33,12 +33,13 @@ jobs:
 
       - name: Build
         continue-on-error: true
+        working-directory: src
         run: hugo --minify -d ./public
 
       - name: Clone Another Github Repo
         uses: actions/checkout@v3
         with:
-          path: ./dest
+          path: dest
           ref: main
           repository: anassawalha95/garden
           token: ${{ secrets.DEPLOY_TOKEN }}
