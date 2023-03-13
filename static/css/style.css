@@ -1,0 +1,56 @@
+.line-breaks>hr {
+    overflow: visible;
+    padding: 0;
+    margin: 5em auto;
+    border: none;
+    color: var(--gray);
+    text-align: center;
+    width: 40%;
+    z-index: -999;
+    border-color: var(--gray);
+}
+
+
+
+.line-breaks>hr:after {
+    content: "*** ";
+    z-index: -999;
+    display: inline-block;
+    margin: -1em 0 0.5em;
+    font-size: 1.5em;
+    padding: 0.5em 1em;
+    background: var(--light);
+    transform: translateY(-0.1em);
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(../segoe-ui-4-cufonfonts/Segoe\ UI.ttf);
+  }
+  
+  * {
+    font-family: myFirstFont!important;
+  }
+
+/* @keyframes fade-in-top {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+body {
+    opacity: 0;
+    animation-name: fade-in-top;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+} */

@@ -1,0 +1,39 @@
+{{if $.Site.Data.config.enableFooter}}
+{{if $.Site.Data.graphConfig.enableGlobalGraph}}
+<div class="page-end" id="footer">
+
+
+
+  <div>
+    {{partial "graph.html" .}}
+  </div>
+
+
+
+</div>
+{{else}}
+<hr />
+<div class="page-end" id="footer">
+
+
+
+  {{ $hasHeaders := gt (len (findRE "<h\\d.*?>(.|\n)*?</h\\d>" .Content)) 0 }}
+    {{ if (or (and (not $.Site.Data.config.enableBacklinks) .Params.enableBacklinks) (and
+    $.Site.Data.config.enableBacklinks (ne .Params.enableBacklinks false) $hasHeaders)) }}
+    <div class="backlinks-container">
+      {{partial "backlinks.html" .}}
+    </div>
+    {{end}}
+    <div>
+      {{partial "graph.html" .}}
+    </div>
+
+
+
+</div>
+{{end}}
+{{end}}
+
+
+
+{{partial "contact.html" .}}

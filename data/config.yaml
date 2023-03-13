@@ -1,0 +1,33 @@
+name: GNOSIS
+enableToc: false
+openToc: false
+enableLinkPreview: true
+enableLatex: true
+enableCodeBlockTitle: true
+enableCodeBlockCopy: false
+enableCallouts: true
+enableSPA: true
+enableFooter: true
+enableContextualBacklinks: true
+enableRecentNotes: true
+enableGitHubEdit: false
+enableMermaid: true
+enableBackLinks: false
+GitHubLink: https://github.com/anassawalha95/garden
+search:
+  enableSemanticSearch: false
+  operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"
+  operandIndexId: "REPLACE-WITH-YOUR-OPERAND-INDEX-ID"
+description:
+  Host your second brain and digital garden for free. Quartz features extremely fast full-text search,
+  Wikilink support, backlinks, local graph, tags, and link previews.
+page_title: "GNOSIS"
+links:
+  - link_name: Insights
+    link: https://twitter.com/_jzhao
+  - link_name: Services
+    link: https://github.com/jackyzha0
+  - link_name: About
+    link: https://github.com/jackyzha0
+  - link_name: Contact
+    link: https://github.com/jackyzha0
