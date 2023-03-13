@@ -56,11 +56,9 @@ jobs:
       - name: Commit and Push to Another Github Repo
         working-directory: dest
         run: |
-
-          gh auth login --with-token  ${{ secrets.DEPLOY_TOKEN }}
           git add .
           git commit -m "Deploy to Github Pages"
-          git push origin HEAD:main
+          git push origin main
 
 #   job2:
 # name: Deploy to Another Github Repo
