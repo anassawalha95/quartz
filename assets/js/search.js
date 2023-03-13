@@ -141,11 +141,7 @@ const highlight = (content, term) => {
     const text = removeMarkdown(content)
     const resultTitle = highlight(title, term)
     const resultText = highlight(text, term)
-
-    const contentIndex = url.indexOf("/content")
-    const result = url.substring(contentIndex + "/content".length)
-
-    return `<button class="result-card" id="${result}">
+    return `<button class="result-card" id="${url}">
         <h3>${resultTitle}</h3>
         <p>${resultText}</p>
     </button>`
@@ -153,7 +149,6 @@ const highlight = (content, term) => {
 
   const redir = (id, term) => {
     // SPA navigation
-
     window.Million.navigate(
       new URL(`${BASE_URL.replace(/\/$/g, "")}${id}#:~:text=${encodeURIComponent(term)}/`),
       ".singlePage",
