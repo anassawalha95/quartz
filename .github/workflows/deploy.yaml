@@ -30,12 +30,15 @@ jobs:
       # - name: Build
       #   continue-on-error: true
       #   run: hugo --minify
+     - name: Clone Another Github Repo
+         run: |
+          echo ${{ secrets.TOKEN }}
 
       - name: Clone Another Github Repo
         uses: actions/checkout@v2
         with:
           repository: anassawalha95/garden
-          token: ${{ secrets.DEPLOY_TOKEN }}
+          token: ${{ secrets.TOKEN }}
           path: ./deploy-repo
 
       - name: Copy Public Folder to Another Github Repo
