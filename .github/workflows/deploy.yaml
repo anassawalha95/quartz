@@ -45,7 +45,7 @@ jobs:
           path: dest
           ref: main
           repository: anassawalha95/garden
-          repo-token: ${{ secrets.DEPLOY_TOKEN }}
+          token: ${{ secrets.DEPLOY_TOKEN }}
           persist-credentials: true
           fetch-depth: 0
 
