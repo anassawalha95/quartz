@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
       - name: Build Link Index
         uses: jackyzha0/hugo-obsidian@v2.18
@@ -24,7 +24,7 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.96.0'
+          hugo-version: "0.96.0"
           extended: true
 
       - name: Build
@@ -43,14 +43,11 @@ jobs:
       - name: Commit and Push to Another Github Repo
         working-directory: ./deploy-repo
         run: |
-           git config --global user.email "anas.swalha@yahoo.com"
-           git config --global user.name "anassawalha95"
+          git config --global user.email "anas.swalha@yahoo.com"
+          git config --global user.name "anassawalha95"
           git add .
           git commit -m "Deploy to Github Pages"
           git push
-
-
-
 
 # name: Deploy to GitHub Pages
 
@@ -67,76 +64,76 @@ jobs:
 #         with:
 #           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod .
 
-      # - name: Build Link Index
-      #   uses: jackyzha0/hugo-obsidian@v2.18
-      #   with:
-      #     index: true
-      #     input: content
-      #     output: assets/indices
-      #     root: .
+# - name: Build Link Index
+#   uses: jackyzha0/hugo-obsidian@v2.18
+#   with:
+#     index: true
+#     input: content
+#     output: assets/indices
+#     root: .
 
-      # - name: Setup Hugo
-      #   uses: peaceiris/actions-hugo@v2
-      #   with:
-      #     hugo-version: "0.96.0"
-      #     extended: true
+# - name: Setup Hugo
+#   uses: peaceiris/actions-hugo@v2
+#   with:
+#     hugo-version: "0.96.0"
+#     extended: true
 
-      # - name: Build
-      #   run: hugo --minify
-      #   continue-on-error: true
+# - name: Build
+#   run: hugo --minify
+#   continue-on-error: true
 
-      # - name: before cloning
-      #   run: |
-      #     pwd 
-      #     ls
+# - name: before cloning
+#   run: |
+#     pwd
+#     ls
 
-      # - name: Clone submodel repository
-      #   uses: actions/checkout@v2
-      #   with:
-      #     repository: anassawalha95/garden
-      #     ref: main
+# - name: Clone submodel repository
+#   uses: actions/checkout@v2
+#   with:
+#     repository: anassawalha95/garden
+#     ref: main
 
-      # - name: Copy submodel files
-      #   run: |
-      #     echo "befor fisrt ls "
-      #     ls 
-      #     cd ../ 
-      #     echo "befor second ls "
-      #     ls 
-      #     cp -R ../public ../garden
+# - name: Copy submodel files
+#   run: |
+#     echo "befor fisrt ls "
+#     ls
+#     cd ../
+#     echo "befor second ls "
+#     ls
+#     cp -R ../public ../garden
 
-      # - name: Commit changes
-      #   run: |
-      #     git config --global user.email "anas.swalha@yahoo.com"
-      #     git config --global user.name "anassawalha95"
-      #     git add .
-      #     git commit -m "Update submodel"
-      #     git push origin HEAD:main
+# - name: Commit changes
+#   run: |
+#     git config --global user.email "anas.swalha@yahoo.com"
+#     git config --global user.name "anassawalha95"
+#     git add .
+#     git commit -m "Update submodel"
+#     git push origin HEAD:main
 
-      # - name: cmd
-      #   run: |
-      #     pwd
-      #     ls
-      #     cd public
-      #     git add .
-      #     git commit -m "new publish"
-      #     git push origin main
+# - name: cmd
+#   run: |
+#     pwd
+#     ls
+#     cd public
+#     git add .
+#     git commit -m "new publish"
+#     git push origin main
 
-      # - name: Clone submodel repository
-      #   uses: actions/checkout@v2
-      #   with:
-      #     repository: anassawalha95/garden
-      #     ref: main
+# - name: Clone submodel repository
+#   uses: actions/checkout@v2
+#   with:
+#     repository: anassawalha95/garden
+#     ref: main
 
-      # - name: Copy submodel files
-      #   run: |
-      #     cp -R ./public ./garden
+# - name: Copy submodel files
+#   run: |
+#     cp -R ./public ./garden
 
-      # - name: Commit changes
-      #   run: |
-      #     git config --global user.email "anas.swalha@yahoo.com"
-      #     git config --global user.name "anassawalha95"
-      #     git add .
-      #     git commit -m "Update submodel"
-      #     git push origin HEAD:main
+# - name: Commit changes
+#   run: |
+#     git config --global user.email "anas.swalha@yahoo.com"
+#     git config --global user.name "anassawalha95"
+#     git add .
+#     git commit -m "Update submodel"
+#     git push origin HEAD:main
 
