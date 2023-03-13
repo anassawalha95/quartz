@@ -13,7 +13,7 @@ jobs:
         with:
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Build Link Index
+      # - name: Build Link Index
       #   uses: jackyzha0/hugo-obsidian@v2.18
       #   with:
       #     index: true
@@ -40,6 +40,7 @@ jobs:
           repo-token: ${{ secrets.DEPLOY_TOKEN }}
           path: ./deploy-repo
           persist-credentials: true
+
       - name: Copy Public Folder to Another Github Repo
         run: cp -r ./public/* ./deploy-repo/
 
