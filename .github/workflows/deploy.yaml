@@ -20,9 +20,9 @@ jobs:
         uses: jackyzha0/hugo-obsidian@v2.18
         with:
           index: true
-          input: src/content
-          output: src/assets/indices
-          root: src
+          input: content
+          output: assets/indices
+          root: .
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -32,8 +32,7 @@ jobs:
 
       - name: Build
         continue-on-error: true
-        working-directory: src
-        run: hugo --minify -d ./public
+        run: hugo --minify
 
       - name: Clone Another Github Repo
         uses: actions/checkout@v3
@@ -45,16 +44,11 @@ jobs:
           persist-credentials: true
           fetch-depth: 0
 
-      - name: clean up previous public folder
+      - name: Copy and cleanup Public Folder to Another Github Repo
         shell: bash
         run: |
-          ls  dest
           rm -rf dest/*
-          ls  dest
-
-      - name: Copy Public Folder to Another Github Repo
-        shell: bash
-        run: cp -r src/public/* dest
+          cp -r public/* dest
 
       - name: Commit and Push to Another Github Repo
         working-directory: dest
