@@ -45,13 +45,12 @@ jobs:
       - name: Copy and cleanup Public Folder to Another Github Repo
         shell: bash
         run: |
-          rm -rf dest/*
-          ls 
-          ls public
-          ls public/assets/indices
-          cp -r public/* dest
-          ls dest/assets
-          ls dest/assets/indices
+          rm -rf dest/* && echo "line 1"
+          ls  && echo "line 2"
+          ls public && echo "line 3"
+          ls public/indices && echo "line 4"
+          cp -r public/* dest && echo "line 5"
+          ls dest/indices && echo "line 6"
 
       - name: Commit and Push to Another Github Repo
         working-directory: dest
