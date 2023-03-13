@@ -5,8 +5,8 @@ enableLinkPreview: true
 enableLatex: true
 enableCodeBlockTitle: true
 enableCodeBlockCopy: false
-enableCallouts: true
-enableSPA: true
+enableCallouts: false
+enableSPA: false
 enableFooter: true
 enableContextualBacklinks: true
 enableRecentNotes: false
@@ -14,7 +14,6 @@ enableGitHubEdit: false
 enableMermaid: false
 enableBackLinks: true
 GitHubLink: https://github.com/anassawalha95/garden
-baseURL: https://github.com/anassawalha95/garden
 search:
   enableSemanticSearch: false
   operandApiKey: "REPLACE-WITH-YOUR-OPERAND-API-KEY"

@@ -1,4 +1,4 @@
-baseURL = "https://anassawalha95.github.io/garden/"
+
 languageCode = "en-us"
 enableEmoji = true
 relativeURLs = true
@@ -48,4 +48,4 @@ enableGitInfo = true
         lastmod = ["lastmod", ":git", "date", "publishDate"]
         publishDate = ["publishDate", "date"]
     [markup.goldmark.renderer]
-        unsafe = false
+        unsafe = true
