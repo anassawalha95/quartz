@@ -11,14 +11,11 @@ aliases:
 
 Quartz is designed to be effortless to deploy. If you forked and cloned Quartz directly from the repository, everything should already be good to go! Follow the steps below.
 
-### Enable GitHub Actions Permissions
+### Enable GitHub Actions
 
-By default, GitHub disables workflows from modifying your files (for good reason!). However, Quartz needs this to write the actual site files back to GitHub.
+By default, GitHub disables workflows from running automatically on Forked Repostories. Head to the 'Actions' tab of your forked repository and Enable Workflows to setup deploying your Quartz site!
 
-Head to `Settings > Action > General > Workflow Permissions` and choose `Read and Write Permissions`
-
-![notes/images/github-actions.png](images\github-actions.png)
-*Enable GitHub Actions*
+![Enable GitHub Actions](notes/images/github-actions.png)*Enable GitHub Actions*
 
 ### Enable GitHub Pages
 
@@ -83,17 +80,17 @@ Please note that the `cname` field should *not* have any path `e.g. end with /qu
 	cname: <YOUR-DOMAIN>
 ````
 
-Have a custom domain? [Learn how to set it up with Quartz ](notes/custom%20Domain.md).
+Have a custom domain? [Learn how to set it up with Quartz ](custom%20Domain.md).
 
 ### Ignoring Files
 
 Only want to publish a subset of all of your notes? Don't worry, Quartz makes this a simple two-step process.
 
-❌ [Excluding pages from being published](notes/ignore%20notes.md)
+❌ [Excluding pages from being published](ignore%20notes.md)
 
 ## Docker Support
 
-If you don't want to use a hosting service, you can host using [Docker](notes/docker.md) instead!
+If you don't want to use a hosting service, you can host using [Docker](docker.md) instead!
 I would *not use this method* unless you know what you are doing.
 
 ---
@@ -101,6 +98,6 @@ I would *not use this method* unless you know what you are doing.
 Now that your Quartz is live, let's figure out how to make Quartz really *yours*!
 
  > 
- > Step 6: 🎨 [Customizing Quartz](notes/config.md)
+ > Step 6: 🎨 [Customizing Quartz](config.md)
 
-Having problems? Checkout our [FAQ and Troubleshooting guide](notes/troubleshooting.md).
+Having problems? Checkout our [FAQ and Troubleshooting guide](troubleshooting.md).

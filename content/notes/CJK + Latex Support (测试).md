@@ -39,4 +39,4 @@ $$
 
 ## RTL
 
-More information on configuring RTL languages like Arabic in the [config](notes/config.md) page.
+More information on configuring RTL languages like Arabic in the [config](config.md) page.

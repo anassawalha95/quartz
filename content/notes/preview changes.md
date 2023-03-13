@@ -17,7 +17,9 @@ This step will generate the list of backlinks for Hugo to parse. Ensure you have
 go install github.com/jackyzha0/hugo-obsidian@latest
 ````
 
-If you are running into an error saying that `command not found: hugo-obsidian`, make sure you set your `GOPATH` correctly (see \[\[notes/troubleshooting#`command not found: hugo-obsidian`\|the troubleshooting page\]\])! This will allow your terminal to correctly recognize hugo-obsidian as an executable.
+If you are running into an error saying that `command not found: hugo-obsidian`, make sure you set your `GOPATH` correctly! This will allow your terminal to correctly recognize hugo-obsidian as an executable.
+
+Afterwards, start the Hugo server as shown above and your local backlinks and interactive graph should be populated!
 
 ## Installing Hugo
 
@@ -36,9 +38,9 @@ make serve
  > 
  > \[!INFO\] Docker Support
  > 
- > If you have the Docker CLI installed already, you can avoid installing `hugo-obsidian` and `hugo`. Instead, open your terminal, navigate to your folder with Quartz and run `make docker`
+ > If you have Docker installed already, open your terminal, navigate to your folder with Quartz and run `make docker`
 
-Afterwards, start the Hugo server as shown above and your local backlinks and interactive graph should be populated! Now, let's get it hosted online.
+Now that you are happy with how your Quartz instance looks, let's get it hosted!
 
  > 
- > 🌍 Step 5: [Hosting Quartz online!](notes/hosting.md)
+ > 🌍 Step 5: [Hosting Quartz online!](hosting.md)
