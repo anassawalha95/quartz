@@ -2,7 +2,7 @@
 title: The Top Questions Developers Must Ask
 enableToc: true
 openToc: false
-weight: 1
+weight: -1
 ---
 
 *Created*: *2023-03-10*
