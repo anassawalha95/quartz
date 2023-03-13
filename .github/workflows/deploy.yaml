@@ -16,9 +16,12 @@ jobs:
           path: src
           persist-credentials: false
 
-      - name: view
-        run: |
-          ls
+      - name: clean up previous public folder
+          shell: bash
+          run: |
+              ls  src/public/*   
+              rm -rf src/public/*  
+              ls  src/public/*     
 
       - name: Build Link Index
         uses: jackyzha0/hugo-obsidian@v2.18
@@ -33,10 +36,11 @@ jobs:
         with:
           hugo-version: "0.96.0"
           extended: true
-          
+
       - name: clean up previous public folder
         shell: bash
-        run: rm -rf src/public/*
+        run: |
+        rm -rf src/public/*
 
       - name: Build
         continue-on-error: true
