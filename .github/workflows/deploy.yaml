@@ -48,10 +48,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
         run: |
-          git config --global user.email "anas.swalha@yahoo.com"
           git config --global user.name "anassawalha95"
-          git config --global credential.helper 'store --file ~/.git-credentials'
-          echo "https://anassawalha95:${GITHUB_TOKEN}@github.com" >> ~/.git-credentials
+          git config --global user.email "anas.swalha@yahoo.com" "${{ secrets.DEPLOY_TOKEN }}"
           git add .
           git commit -m "Deploy to Github Pages"
           git push origin HEAD:main
