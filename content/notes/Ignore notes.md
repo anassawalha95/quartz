@@ -2,6 +2,8 @@
 title: Ignore notes
 ---
 
+erfds
+
 ### Quartz Ignore
 
 Edit `ignoreFiles` in `config.toml` to include paths you'd like to exclude from being rendered.

@@ -18,7 +18,7 @@ The easiest way would be to add your own HTML partial that supports the function
 
 ### My GitHub pages is just showing the README and not Quartz
 
-Make sure you set the source to deploy from `master` (and not `hugo`) using `/ (root)`! See more in the [hosting](hosting.md) guide
+Make sure you set the source to deploy from `master` (and not `hugo`) using `/ (root)`! See more in the [Hosting](Hosting.md) guide
 
 ### Some of my pages have 'January 1, 0001' as the last modified date
 
@@ -34,11 +34,11 @@ git config --global core.ignorecase true
 
 ### Can I publish only a subset of my pages?
 
-Yes! Quartz makes selective publishing really easy. Heres a guide on [excluding pages from being published](Ignore%20notes.md).
+Yes! Quartz makes selective publishing really easy. Heres a guide on [Excluding pages from being published](Ignore%20notes.md).
 
 ### Can I host this myself and not on GitHub Pages?
 
-Yes! All built files can be found under `/public` in the `master` branch. More details under [hosting](hosting.md).
+Yes! All built files can be found under `/public` in the `master` branch. More details under [Hosting](Hosting.md).
 
 ### `command not found: hugo-obsidian`
 
@@ -55,11 +55,11 @@ source ~/.bash_profile
 
 ### How come my notes aren't being rendered?
 
-You probably forgot to include front matter in your Markdown files. You can either setup [Obsidian](obsidian.md) to do this for you or you need to manually define it. More details in [the 'how to edit' guide](editing.md).
+You probably forgot to include front matter in your Markdown files. You can either setup [Obsidian](Obsidian.md) to do this for you or you need to manually define it. More details in [the 'how to edit' guide](Editing.md).
 
 ### My custom domain isn't working!
 
-Walk through the steps in [the hosting guide](hosting.md) again. Make sure you wait 30 min to 1 hour for changes to take effect.
+Walk through the steps in [the hosting guide](Hosting.md) again. Make sure you wait 30 min to 1 hour for changes to take effect.
 
 ### How do I setup analytics?
 
@@ -75,7 +75,7 @@ To edit the main home page, open `/content/_index.md`.
 
 ### How do I change the colours?
 
-You can change the theme by editing `assets/custom.scss`. More details on customization and themeing can be found in the [customization guide](config.md).
+You can change the theme by editing `assets/custom.scss`. More details on customization and themeing can be found in the [Customization guide](Config.md).
 
 ### How do I add images?
 
@@ -88,7 +88,7 @@ Example image (source is in content/notes/images/example.png)
 
 ### My Interactive Graph and Backlinks aren't up to date
 
-By default, the `linkIndex.json` (which Quartz needs to generate the Interactive Graph and Backlinks) are not regenerated locally. To set that up, see the guide on [local editing](editing.md)
+By default, the `linkIndex.json` (which Quartz needs to generate the Interactive Graph and Backlinks) are not regenerated locally. To set that up, see the guide on [local editing](notes/Editing.md)
 
 ### Can I use React/Vue/some other framework?
 

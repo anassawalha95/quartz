@@ -1,5 +1,5 @@
 ---
-title: callouts
+title: Callouts
 ---
 
 ## Callout support

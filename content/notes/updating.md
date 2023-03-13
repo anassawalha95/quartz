@@ -1,5 +1,5 @@
 ---
-title: updating
+title: Updating
 aliases:
   - update
 weight: 1

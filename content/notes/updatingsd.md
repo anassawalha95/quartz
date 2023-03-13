@@ -1,5 +1,5 @@
 ---
-title: updatingsd
+title: Updatingsd
 aliases:
   - updates
 weight: 1

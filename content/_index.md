@@ -23,5 +23,5 @@ s
 [Contact🗺️⚛️](notes\Gnosis\Contact%F0%9F%97%BA%EF%B8%8F%E2%9A%9B%EF%B8%8F.md)
 🔍 [Insights](notes\Gnosis\Insights.md)
 this is for testing pubose
-[test](notes\test.md)
+[Test](notes\Test.md)
 s

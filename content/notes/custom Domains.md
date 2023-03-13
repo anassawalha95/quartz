@@ -1,5 +1,5 @@
 ---
-title: custom Domains
+title: Custom Domains
 weight: 1
 ---
 

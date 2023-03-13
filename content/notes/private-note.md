@@ -1,5 +1,5 @@
 ---
-title: private-note
+title: Private-note
 ---
 
 This page doesn't get published!

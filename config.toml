@@ -2,7 +2,7 @@ baseURL = "https://anassawalha95.github.io/garden/"
 languageCode = "en-us"
 enableEmoji = true
 relativeURLs = false
-disablePathToLower = false
+disablePathToLower = true
 summaryLength = 30
 ignoreFiles = [
     "/content/templates/*",
@@ -49,4 +49,4 @@ enableGitInfo = true
         lastmod = ["lastmod", ":git", "date", "publishDate"]
         publishDate = ["publishDate", "date"]
     [markup.goldmark.renderer]
-        unsafe = true
+        unsafe = false

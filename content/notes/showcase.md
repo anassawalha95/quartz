@@ -1,5 +1,5 @@
 ---
-title: showcase
+title: Showcase
 weight: 1
 ---
 

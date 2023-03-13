@@ -1,10 +1,11 @@
 ---
-title: docker
+title: Docker
 tags:
   - setup
 ---
 
-If you want to host Quartz on a machine without using a webpage hosting service, it may be easier to [install Docker Compose](https://docs.docker.com/compose/install/) and follow the instructions below than to [install Quartz's dependencies manually](preview%20changes.md).
+cc
+If you want to host Quartz on a machine without using a webpage hosting service, it may be easier to [install Docker Compose](https://docs.docker.com/compose/install/) and follow the instructions below than to [install Quartz's dependencies manually](Preview-changes.md).
 
 ## Hosting Quartz Locally
 
