@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - hugo
-needs: [fetch]
+
 jobs:
   fetch:
     runs-on: ubuntu-20.04
@@ -24,6 +24,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-20.04
+    needs: [fetch]
     steps:
       - name: Build Link Index
         uses: jackyzha0/hugo-obsidian@v2.18
