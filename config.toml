@@ -1,0 +1,52 @@
+baseURL = "https://anassawalha95.github.io/garden/"
+languageCode = "en-us"
+enableEmoji = true
+relativeURLs = false
+disablePathToLower = false
+summaryLength = 30
+ignoreFiles = [
+    "/content/templates/*",
+    "/content/private/*",
+]
+pluralizeListTitles = true
+ 
+paginate = 10
+enableGitInfo = true
+[markup]
+    [markup.tableOfContents]
+        endLevel = 6
+        ordered = true
+        startLevel = 2
+    [markup.highlight]
+        noClasses = false
+        anchorLineNos = false
+        codeFences = true
+        guessSyntax = true
+        hl_Lines = ""
+        lineAnchors = ""
+        lineNoStart = 1
+        lineNos = true
+        lineNumbersInTable = true
+        style = "dracula"
+    [markup.goldmark]
+        [markup.goldmark.extensions]
+            definitionList = true
+            footnote = true
+            linkify = true
+            linkifyProtocol = 'https'
+            strikethrough = true
+            table = true
+            taskList = true
+            typographer = true
+        [markup.goldmark.parser]
+            autoHeadingID = false
+            autoHeadingIDType = 'github'
+            wrapStandAloneImageWithinParagraph = true
+            [markup.goldmark.parser.attribute]
+                block = false
+                title = true
+    [frontmatter]
+        lastmod = ["lastmod", ":git", "date", "publishDate"]
+        publishDate = ["publishDate", "date"]
+    [markup.goldmark.renderer]
+        unsafe = true
