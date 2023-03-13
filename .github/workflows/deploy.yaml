@@ -38,13 +38,12 @@ jobs:
 
       - name: Copy submodel files
         run: |
-          echo "befor second ls "
+          echo "befor fisrt ls "
           ls 
           cd ../ 
-          pwd
           echo "befor second ls "
           ls 
-          cp -R ../../public ../../garden
+          cp -R ../public ../garden
 
       # - name: Commit changes
       #   run: |
