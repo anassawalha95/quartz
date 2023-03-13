@@ -6,7 +6,7 @@ on:
       - hugo
 
 jobs:
-  deploy:
+  fetch:
     runs-on: ubuntu-20.04
     steps:
       - name: fetching code
@@ -23,6 +23,10 @@ jobs:
           ls
         needs: fetching code
 
+      
+   deploy:
+     runs-on: ubuntu-20.04
+     steps:
       - name: Build Link Index
         uses: jackyzha0/hugo-obsidian@v2.18
         with:
