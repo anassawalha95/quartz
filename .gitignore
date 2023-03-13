@@ -4,5 +4,6 @@ resources
 .idea
 content/.obsidian
 assets/indices/linkIndex.json
-assets/indices/contentIndex.json
+
+public/indices/*
 # linkmap
