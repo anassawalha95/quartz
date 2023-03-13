@@ -47,7 +47,7 @@ jobs:
         run: |
           rm -rf dest/*
           cp -r public/* dest
-          ls dest
+          ls dest/assets/indices/
 
       - name: Commit and Push to Another Github Repo
         working-directory: dest
