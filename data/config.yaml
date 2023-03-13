@@ -11,7 +11,7 @@ enableFooter: true
 enableContextualBacklinks: true
 enableRecentNotes: true
 enableGitHubEdit: false
-enableMermaid: false
+enableMermaid: true
 enableBackLinks: false
 GitHubLink: https://github.com/anassawalha95/garden
 search:

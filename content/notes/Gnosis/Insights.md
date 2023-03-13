@@ -10,6 +10,7 @@ tags:
 
 ---
 
+[troubleshooting](..\troubleshooting.md)
 [Insights - Types](..\Insights%20-%20Types.md)
 
 [Insights -   Structure](..\Insights%20-%20%20%20Structure.md)

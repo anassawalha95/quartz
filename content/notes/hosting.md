@@ -2,7 +2,6 @@
 title: hosting
 tags:
   - setup
-weight: -1
 aliases:
   - hosting
 ---

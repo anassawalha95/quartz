@@ -1,5 +1,6 @@
 ---
 title: CJK + Latex Support (测试)
+weight: -1
 ---
 
 ## Chinese, Japanese, Korean Support
