@@ -32,16 +32,8 @@ jobs:
         continue-on-error: true
 
       - name: push to the garden
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: ./public
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: commit and push changes
         run: |
-          git config --global user.email "anas.swalha@yahoo.co,"
-          git config --global user.name "Anas Sawalha"
+          cd ./public
           git add .
-          git commit -m "New publish"
-          git push
+          git commit -m "Update submodel"
+          git push origin HEAD:<branch>
