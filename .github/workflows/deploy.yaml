@@ -30,6 +30,12 @@ jobs:
       # - name: Build
       #   run: hugo --minify
       #   continue-on-error: true
+
+      - name: before cloning
+        run: |
+          pwd 
+          ls
+
       - name: Clone submodel repository
         uses: actions/checkout@v2
         with:
