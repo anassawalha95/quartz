@@ -31,9 +31,20 @@ jobs:
         run: hugo --minify
         continue-on-error: true
 
-      - name: push to the garden
+      - name: Clone submodel repository
+            uses: actions/checkout@v2
+            with:
+              repository: https://github.com/anassawalha95/garden.git
+              ref: main
+
+      - name: Copy submodel files
         run: |
-          cd ./public
+          cp -R ./public ./garden
+
+      - name: Commit changes
+        run: |
+          git config --global user.email "anas.swalha@yahoo.com"
+          git config --global user.name "anassawalha95"
           git add .
           git commit -m "Update submodel"
-          git push origin main
+          git push origin HEAD:main
