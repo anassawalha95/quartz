@@ -2,6 +2,12 @@
 {{ $config := cond (eq $.Site.Language.Lang "en") "config" (printf "config.%s" $.Site.Language.Lang) }}
 {{ $data := index $.Site.Data $config }}
 <head>
+  
+
+  {{ $popover := resources.Get "js/popover.js" | resources.Fingerprint "md5" |
+  resources.Minify }}
+  <script async src="{{$popover.Permalink}}"></script>
+  
   <!-- Meta tags -->
   <meta charset="UTF-8" />
   <meta
@@ -43,6 +49,7 @@
   {{- end }}
   {{ end }}
 
+
   <!-- CSS Stylesheets and Fonts -->
   {{$sass := resources.Match "styles/[!_]*.scss" }}
   {{$css := slice }}
@@ -63,6 +70,7 @@
 
 
    <!-- Base scripts -->
+   
   {{$scripts := (slice "js/darkmode.js" "js/util.js")}}
   {{range $scripts}}
   {{$scriptname := .}}
@@ -75,10 +83,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/@floating-ui/core@1.2.1"></script>
   <script src="https://cdn.jsdelivr.net/npm/@floating-ui/dom@1.2.1"></script>
-  {{ $popover := resources.Get "js/popover.js" | resources.Fingerprint "md5" |
-  resources.Minify }}
-  <script async src="{{$popover.Permalink}}"></script>
-
+  
   <!-- Optional scripts -->
   {{ if $data.enableCodeBlockTitle | default $.Site.Data.config.enableCallouts }}
   {{ $codeTitle := resources.Get "js/code-title.js" | resources.Fingerprint "md5" | resources.Minify }}

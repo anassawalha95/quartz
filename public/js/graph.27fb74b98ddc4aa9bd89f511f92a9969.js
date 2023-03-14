@@ -10,7 +10,7 @@ async function drawGraph(baseUrl, isHome, pathColors, graphConfig) {
 
   const curPage = cleanUrl.replace(/\/$/g, "").replace(baseUrl, "")
 
-  const parseIdsFromLinks = (links) => [
+  const parseIdsFromLinks = (links) =>  [
     ...new Set(links.flatMap((link) => [link.source, link.target])),
   ]
 

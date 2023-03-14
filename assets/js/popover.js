@@ -5,13 +5,13 @@ function htmlToElement(html) {
   return template.content.firstChild
 }
 
-function initPopover(baseURL, useContextualBacklinks) {
+async function initPopover(baseURL, useContextualBacklinks) {
   const basePath = baseURL.replace(window.location.origin, "")
-  fetchData.then(({ content }) => {
+  await fetchData.then(({ content }) => {
     const links = [...document.getElementsByClassName("internal-link")]
     links
-      .filter(li => li.dataset.src || (li.dataset.idx && useContextualBacklinks))
-      .forEach(li => {
+      .filter((li) => li.dataset.src || (li.dataset.idx && useContextualBacklinks))
+      .forEach((li) => {
         let el
         if (li.dataset.ctx) {
           const linkDest = content[li.dataset.src]
@@ -45,17 +45,21 @@ function initPopover(baseURL, useContextualBacklinks) {
           if (LATEX_ENABLED) {
             renderMathInElement(el, {
               delimiters: [
-                { left: '$$', right: '$$', display: false },
-                { left: '$', right: '$', display: false },
+                { left: "$$", right: "$$", display: false },
+                { left: "$", right: "$", display: false },
               ],
-              throwOnError: false
+              throwOnError: false,
             })
           }
 
           li.addEventListener("mouseover", () => {
             // fix tooltip positioning
             window.FloatingUIDOM.computePosition(li, el, {
-              middleware: [window.FloatingUIDOM.offset(10), window.FloatingUIDOM.inline(), window.FloatingUIDOM.shift()],
+              middleware: [
+                window.FloatingUIDOM.offset(10),
+                window.FloatingUIDOM.inline(),
+                window.FloatingUIDOM.shift(),
+              ],
             }).then(({ x, y }) => {
               Object.assign(el.style, {
                 left: `${x}px`,
@@ -66,8 +70,8 @@ function initPopover(baseURL, useContextualBacklinks) {
             el.classList.add("visible")
             plausible("Popover Hover", {
               props: {
-                href: li.dataset.src 
-              }
+                href: li.dataset.src,
+              },
             })
           })
           li.addEventListener("mouseout", () => {

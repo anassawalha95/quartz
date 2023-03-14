@@ -4,9 +4,8 @@ enableToc: false
 enablebacklinks: false
 ---
 
-
- > 
- > Welcome to GNOSIS.
+[notes/testing/One](notes\testing\One.md)
+\>Welcome to GNOSIS.
 
 Creative Consultants for Iconic Real Estate Developments.
 
