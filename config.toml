@@ -1,17 +1,24 @@
 baseURL = "https://anassawalha95.github.io/garden/"
-languageCode = "en-us"
+
 enableEmoji = true
-relativeURLs = false
-disablePathToLower = true
-summaryLength = 30
+
 ignoreFiles = [
     "/content/templates/*",
     "/content/private/*",
 ]
-pluralizeListTitles = true
- 
-paginate = 10
+
+languageCode = "en-us"
+googleAnalytics = "G-V9PR00CYK8"
+pygmentsUseClasses = true
+relativeURLs = false
+disablePathToLower = true
+summaryLength = 30
+pluralizeListTitles = false
+paginate = 30
 enableGitInfo = true
+rssLimit = 25
+ 
+
 [markup]
     [markup.tableOfContents]
         endLevel = 6

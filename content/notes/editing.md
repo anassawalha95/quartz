@@ -1,5 +1,5 @@
 ---
-title: Editing
+title: editing
 tags:
   - setup
 weight: -4

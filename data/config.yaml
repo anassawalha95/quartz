@@ -1,12 +1,12 @@
 name: GNOSIS
-enableToc: false
+enableToc: true
 openToc: false
 enableLinkPreview: true
 enableLatex: true
 enableCodeBlockTitle: true
-enableCodeBlockCopy: false
+enableCodeBlockCopy: true
 enableCallouts: true
-enableSPA: false
+enableSPA: true
 enableFooter: true
 enableContextualBacklinks: true
 enableRecentNotes: true

@@ -55,7 +55,7 @@ source ~/.bash_profile
 
 ### How come my notes aren't being rendered?
 
-You probably forgot to include front matter in your Markdown files. You can either setup [Obsidian](Obsidian.md) to do this for you or you need to manually define it. More details in [the 'how to edit' guide](Editing.md).
+You probably forgot to include front matter in your Markdown files. You can either setup [Obsidian](Obsidian.md) to do this for you or you need to manually define it. More details in [the 'how to edit' guide](editing.md).
 
 ### My custom domain isn't working!
 
@@ -88,7 +88,7 @@ Example image (source is in content/notes/images/example.png)
 
 ### My Interactive Graph and Backlinks aren't up to date
 
-By default, the `linkIndex.json` (which Quartz needs to generate the Interactive Graph and Backlinks) are not regenerated locally. To set that up, see the guide on [local editing](notes/Editing.md)
+By default, the `linkIndex.json` (which Quartz needs to generate the Interactive Graph and Backlinks) are not regenerated locally. To set that up, see the guide on [local editing](editing.md)
 
 ### Can I use React/Vue/some other framework?
 
