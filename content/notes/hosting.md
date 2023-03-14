@@ -90,7 +90,7 @@ sasa
 
 ## Docker Support
 
-If you don't want to use a hosting service, you can host using [Docker](Docker.md) instead!
+If you don't want to use a hosting service, you can host using [\[Docker\]](Docker.md) instead!
 I would *not use this method* unless you know what you are doing.
 
 ---
